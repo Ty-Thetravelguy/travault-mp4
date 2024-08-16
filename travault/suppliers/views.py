@@ -1,26 +1,32 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import login, logout
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
-def supplier(request):
-    # Placeholder for login logic
-    return render(request, 'supplierse/supplier.html')
+@login_required
+def supplier_list(request):
+    """View for listing all suppliers."""
+    return render(request, 'suppliers/supplier.html')
 
+@login_required
 def supplier_add(request):
-    # Placeholder for login logic
-    return render(request, 'supplierse/supplier_add.html')
+    """View for adding a new supplier."""
+    return render(request, 'suppliers/supplier_add.html')
 
+@login_required
 def supplier_edit(request):
-    # Placeholder for login logic
-    return render(request, 'supplierse/supplier_edit.html')
+    """View for editing an existing supplier."""
+    return render(request, 'suppliers/supplier_edit.html')
 
+@login_required
 def supplier_process(request):
-    # Placeholder for logout logic
-    return render(request, 'supplierse/supplier_process.html')
+    """View for supplier processes."""
+    return render(request, 'suppliers/supplier_process.html')
 
+@login_required
 def supplier_process_add(request):
-    # Placeholder for registration logic
-    return render(request, 'supplierse/supplier_process_add.html')
+    """View for adding a new supplier process."""
+    return render(request, 'suppliers/supplier_process_add.html')
 
+@login_required
 def supplier_process_edit(request):
-    # Placeholder for profile view logic
-    return render(request, 'supplierse/supplier_process_edit.html')
+    """View for editing an existing supplier process."""
+    return render(request, 'suppliers/supplier_process_edit.html')
