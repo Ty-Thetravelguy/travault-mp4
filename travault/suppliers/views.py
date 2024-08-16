@@ -17,10 +17,10 @@ def supplier_process(request):
     # Placeholder for logout logic
     return render(request, 'supplierse/supplier_process.html')
 
-def supplier_process_(request):
+def supplier_process_add(request):
     # Placeholder for registration logic
     return render(request, 'supplierse/supplier_process_add.html')
 
-def profile_view(request):
+def supplier_process_edit(request):
     # Placeholder for profile view logic
     return render(request, 'supplierse/supplier_process_edit.html')
